@@ -1,2 +1,5 @@
-.body {
-  background: #989822; }
+body {
+  background: red; }
+
+h1, .red {
+  color: green; }

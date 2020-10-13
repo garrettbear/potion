@@ -13,6 +13,7 @@
     "@storybook/html": "^6.0.26",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
     "react-is": "^16.13.1"
   },
   "dependencies": {
@@ -22,11 +23,10 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "watch-sass": "node-sass -w scss -o dist/css",
-    "build-css": "node-sass --include-path scss scss/index.scss   public/css/main.css --output-style compressed",
-    "start": "npm-run-all --parallel styles:watch browsersync",
+    "styles:build": "node-sass --include-path scss scss/index.scss   public/css/main.css --output-style compressed",
     "styles:watch": "node-sass -w scss -o dist/css",
-    "browsersync2": "browser-sync start --server --files \"*.html, *.js, *.css\"",
-    "browsersync": "browser-sync start --server --files dist/css/index.css"
+    "browsersync": "browser-sync start --server --files dist/*",
+    "gulp": "gulp",
+    "start": "npm-run-all --parallel styles:watch browsersync"
   }
 }

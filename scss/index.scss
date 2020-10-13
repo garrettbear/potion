@@ -1,5 +1,9 @@
 @import "_designtokens.scss";
 
 .body {
-  background: $red;
+  background: $green;
+}
+
+h1, .red {
+  color: $red;
 }
